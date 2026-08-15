@@ -60,3 +60,17 @@ dashboard.addEventListener("mousemove", function(e) {
     glow.style.top = y + "px";
 
 });
+
+
+  const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const navLogin = document.getElementById('navLogin');
+    const icon = menuBtn.querySelector('i');
+
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        navLogin.classList.toggle('active');
+        const isOpen = navLinks.classList.contains('active');
+        icon.classList.toggle('fa-bars', !isOpen);
+        icon.classList.toggle('fa-xmark', isOpen);
+    });
