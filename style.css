@@ -404,7 +404,7 @@ body {
 
 @media (max-width: 380px){
         .textline {
-            height: 3%;
+            height: 7%;
         max-width: 95%;
         gap: 5px;
         /* padding: 6px 10px; */
@@ -420,7 +420,7 @@ body {
 }
 
 .homepage{
-    /* height: 90vh; */
+    height: 90vh;
     width: 100%;
     margin: 0%;
       perspective: 1200px;
@@ -639,6 +639,9 @@ body {
      font-weight: 500;
 }
 @media (max-width: 600px){
+    .homepage{
+        height: 60vh;
+    }
     .heading h1{
         font-size: 2.5em;
         font-family:hmm;
@@ -682,65 +685,133 @@ body {
         margin: 0%;
     }
     .heading4 i{
-       
+        padding: 0%;
     display: flex;
     align-items: center;
     color: green;
 }
 .heading4 h5{
-     gap: 10px;
+     gap: 5px;
     display: flex;
-    padding-left: 13px;
+    padding-left:11px;
      color: #636A76;
 }
 
 }
 
-video{
-    height: 90vh;
-    width:90vw;
-     position: relative;
-    width: 80%;
-    /* max-width: 1000px; */
+.video-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3px;
     border-radius: 30px;
-    background: linear-gradient(
-        90deg,
-        #4487ff,
-        #e6e4ec,
-        #22c1ee,
-        #4487ff
-    );
+    background: linear-gradient(90deg, #4487ff, #e6e4ec, #22c1ee, #4487ff);
     background-size: 300% 100%;
     animation: videoBorder 5s linear infinite;
-    box-shadow:
-        0 20px 60px rgba(250, 252, 255, 0.2);
-    width: 100%;
+    box-shadow: 0 20px 60px rgba(250, 252, 255, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-wrapper:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 90px rgba(40, 80, 140, 0.25);
+}
+
+.video-wrapper video {
     display: block;
-    border-radius: 28px;
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    border-radius: 28px;
     background: #111;
-
-}
-.video:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 35px 90px rgba(40, 80, 140, 0.25);
 }
 
 @keyframes videoBorder {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    100% {
-        background-position: 300% 50%;
-    }
-
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
 }
 
+/* ===== 3D Controls Bar ===== */
+.video-controls {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 16px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    background: rgba(20, 22, 30, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.video-wrapper:hover .video-controls,
+.video-wrapper:focus-within .video-controls {
+    opacity: 1;
+}
+
+/* 3D button look */
+.ctrl-btn {
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: linear-gradient(145deg, #3a6dff, #2255e0);
+    box-shadow:
+        0 6px 0 #16309e,
+        0 10px 18px rgba(20, 60, 200, 0.5),
+        inset 0 1px 1px rgba(255,255,255,0.4);
+    transform: translateY(0);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.ctrl-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));
+    pointer-events: none;
+}
+
+.ctrl-btn:hover {
+    background: linear-gradient(145deg, #4c7dff, #2f63f0);
+}
+
+/* pressed / 3D push effect */
+.ctrl-btn:active {
+    transform: translateY(6px);
+    box-shadow:
+        0 0 0 #16309e,
+        0 2px 6px rgba(20, 60, 200, 0.5),
+        inset 0 1px 1px rgba(255,255,255,0.4);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .video-wrapper { width: 92%; padding: 2px; border-radius: 22px; }
+    .video-wrapper video { border-radius: 20px; }
+    .video-controls { gap: 10px; padding: 8px 14px; bottom: 12px; opacity: 1; }
+    .ctrl-btn { width: 40px; height: 40px; }
+    .ctrl-btn svg { width: 18px; height: 18px; }
+}
+
+@media (max-width: 480px) {
+    .video-wrapper { width: 95%; border-radius: 16px; }
+    .video-wrapper video { border-radius: 14px; }
+}
 
 .features{
     height: 95vh;
