@@ -1017,7 +1017,7 @@ transition: transform 0.35s ease,
     border-radius: 5%;
     padding-left: 25px;
     border: 0.01px solid rgba(0, 0, 0, 0.212);
-transition: transform 0.35s ease,
+    transition: transform 0.60s ease,
                 box-shadow 0.5s ease,
                 border-color 0.5s ease;
 }
@@ -1071,10 +1071,10 @@ transition: transform 0.35s ease,
 .features .box3,
 .features .box4 {
     opacity: 0;
-    transform: translateY(45px) scale(0.96);
+    transform: translateY(10px) scale(0.96);
 }
 
-/* Animation start झाल्यावर */
+/* Animation start */
 
 .features.show .fea-1 {
     animation: featureReveal 0.8s ease forwards;
@@ -1088,7 +1088,7 @@ transition: transform 0.35s ease,
 
 .features.show .box1 {
     animation: featureReveal 0.7s ease 0.30s forwards;
-     animation-delay: 0.45s;
+     animation-delay:0.45s;
 }
 
 .features.show .box2 {
@@ -1113,9 +1113,9 @@ transition: transform 0.35s ease,
 
     0% {
         opacity: 0;
-        transform: translateY(45px) scale(0.96);
+        transform: translateY(10px) scale(0.96);
     }
-
+    
     60% {
         opacity: 1;
         transform: translateY(-5px) scale(1.01);
@@ -1245,7 +1245,7 @@ transition: transform 0.35s ease,
     .fea-1 h5 {
         width: 30%;
         height: 2;
-        font-size: 1em;
+        font-size: 0.9em;
         font-weight: 600;
         font-family: hmm;
         margin-top: 5%;
@@ -1314,6 +1314,67 @@ transition: transform 0.35s ease,
         font-size: 0.82rem;
         line-height: 1.35;
         margin-bottom: 1%;
+    }
+}
+
+@media (max-width: 380px) {
+
+    /* ... तुमचा आधीचा 380px चा CSS इथेच ठेवा ... */
+
+    /* ===== Right-side slide-in override ===== */
+    .features .fea-1,
+    .features .fea-2,
+    .features .box1,
+    .features .box2,
+    .features .box3,
+    .features .box4 {
+        opacity: 0;
+        transform: translateX(60px);   /* उजवीकडून सुरुवात */
+    }
+
+    .features.show .fea-1 {
+        animation: featureRevealRight 0.7s ease forwards;
+        animation-delay: 0.15s;
+    }
+
+    .features.show .fea-2 {
+        animation: featureRevealRight 0.7s ease forwards;
+        animation-delay: 0.30s;
+    }
+
+    .features.show .box1 {
+        animation: featureRevealRight 0.6s ease forwards;
+        animation-delay: 0.45s;
+    }
+
+    .features.show .box2 {
+        animation: featureRevealRight 0.6s ease forwards;
+        animation-delay: 1s;
+    }
+
+    .features.show .box3 {
+        animation: featureRevealRight 0.6s ease forwards;
+        animation-delay:1.5s;
+    }
+
+    .features.show .box4 {
+        animation: featureRevealRight 0.6s ease forwards;
+        animation-delay: 2s;
+    }
+
+    @keyframes featureRevealRight {
+        0% {
+            opacity: 0;
+            transform: translateX(60px);
+        }
+        60% {
+            opacity: 1;
+            transform: translateX(-6px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 }
 
@@ -1640,6 +1701,174 @@ transition: transform 0.35s ease,
     }
 }
 
+/* ============================= */
+/* RESPONSIVE — ADD BELOW EXISTING CSS */
+/* ============================= */
+
+/* Laptop / small desktop */
+@media (max-width: 1200px) {
+    .role2 .box1,
+    .role2 .box2,
+    .role2 .box3,
+    .role2 .box4 {
+        width: 21vw;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    .role {
+        height: auto;
+        width: 95vw;
+        margin-bottom: 8%;
+    }
+
+    .role1 h2 {
+        font-size: 2.4rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .role1 h4 {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.5;
+        padding: 0 15px;
+    }
+
+    .role2 {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: center;
+    }
+
+    .role2 .box1,
+    .role2 .box2,
+    .role2 .box3,
+    .role2 .box4 {
+        width: 45%;
+        height: auto;
+        min-height: 30vh;
+        padding: 15px 15px 20px 25px;
+    }
+
+    .role2 .box1 h3,
+    .role2 .box2 h3,
+    .role2 .box3 h3,
+    .role2 .box4 h3 {
+        font-size: 1.25rem;
+    }
+
+    .role2 .box1 .i2 h5,
+    .role2 .box2 .i2 h5,
+    .role2 .box3 .i2 h5,
+    .role2 .box4 .i2 h5 {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile (general) */
+@media (max-width: 600px) {
+    .role {
+        width: 100vw;
+        padding: 0 4%;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    .role2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .role2 .box1,
+    .role2 .box2,
+    .role2 .box3,
+    .role2 .box4 {
+        width: 100%;
+        max-width: 400px;
+        min-height: auto;
+        border-radius: 20px;
+        padding: 15px 15px 20px 20px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .role {
+        margin-top: 15px;
+        padding: 0 3%;
+    }
+
+    .role1 h5 {
+        width: 150px;
+        height: 22px;
+        font-size: 0.8em;
+        margin-top: 20px;
+    }
+
+    .role1 h2 {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        padding: 0 5px;
+    }
+
+    .role1 h4 {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        padding: 0 8px;
+    }
+
+    .role2 {
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .role2 .box1,
+    .role2 .box2,
+    .role2 .box3,
+    .role2 .box4 {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 12px 16px 18px;
+        border-radius: 16px;
+    }
+
+    .role2 .box1 .i1 i,
+    .role2 .box2 .i1 i,
+    .role2 .box3 .i1 i,
+    .role2 .box4 .i1 i {
+        height: 40px;
+        width: 40px;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .role2 .box1 h3,
+    .role2 .box2 h3,
+    .role2 .box3 h3,
+    .role2 .box4 h3 {
+        font-size: 1.1rem;
+    }
+
+    .role2 .box1 .i2 h5,
+    .role2 .box2 .i2 h5,
+    .role2 .box3 .i2 h5,
+    .role2 .box4 .i2 h5 {
+        font-size: 0.8rem;
+        padding: 3px;
+    }
+
+    .role2 .box1 .i2 i,
+    .role2 .box2 .i2 i,
+    .role2 .box3 .i2 i,
+    .role2 .box4 .i2 i {
+        font-size: 0.85rem;
+        margin-top: 6px;
+    }
+}
+
 .stats-section {
     width: 90%;
     min-height: 100px;
@@ -1703,6 +1932,105 @@ transition: transform 0.35s ease,
     text-shadow:
         0 5px 15px rgba(37, 99, 235, 0.2);
 }
+/* ============================= */
+/* RESPONSIVE — ADD BELOW EXISTING CSS */
+/* ============================= */
+
+/* Laptop / small desktop */
+@media (max-width: 1200px) {
+    .stats-section {
+        margin-left: 30px;
+    }
+    .stat-box h2 {
+        font-size: 32px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    .stats-section {
+        width: 92%;
+        margin: 0 auto;
+        min-height: auto;
+        padding: 25px 10px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .stat-box {
+        width: 45%;
+    }
+
+    .stat-box h2 {
+        font-size: 28px;
+    }
+
+    .stat-box p {
+        font-size: 10px;
+    }
+
+    .stats-section::before {
+        width: 250px;
+        height: 130px;
+        filter: blur(70px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .stats-section {
+        width: 90%;
+        border-radius: 18px;
+        padding: 20px 8px;
+    }
+
+    .stat-box {
+        width: 45%;
+    }
+
+    .stat-box h2 {
+        font-size: 24px;
+    }
+
+    .stat-box p {
+        font-size: 9.5px;
+        letter-spacing: 0.3px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .stats-section {
+        width: 95%;
+        border-radius: 14px;
+        padding: 16px 20px;
+        row-gap: 16px;
+        margin-left: 4%;
+    }
+
+    .stat-box {
+        width: 49%;
+    }
+
+    .stat-box h2 {
+        font-size: 20px;
+        letter-spacing: -0.5px;
+    }
+
+    .stat-box p {
+        font-size: 8.5px;
+        letter-spacing: 0.2px;
+        line-height: 1.3;
+    }
+
+    .stats-section::before {
+        width: 180px;
+        height: 100px;
+        filter: blur(50px);
+    }
+}
+
+
 .Dashboard{
     height: 85vh;
     width: 80vw;
@@ -2053,6 +2381,238 @@ transition: transform 0.35s ease,
     }
 }
 
+/* ============================================= */
+/* RESPONSIVE CODE — ADD BELOW EXISTING CSS      */
+/* Hinglish comments diye hain samajhne ke liye  */
+/* ============================================= */
+
+/* -------- Laptop / Small Desktop (1200px) -------- */
+@media (max-width: 1200px) {
+    .Dashboard {
+        width: 90vw; /* laptop par thoda zyada width le lo, taaki content squeeze na ho */
+        height: auto; /* fixed 85vh hatao, kyunki left+prediction-box stack hone ke baad height badh jayegi */
+        flex-wrap: wrap; /* left aur prediction-box agar na maave to neeche wrap ho jayenge */
+        padding: 30px 0; /* height auto hone ke baad thoda breathing space */
+    }
+
+    .left {
+        width: 50%; /* thoda adjust kiya */
+    }
+
+    .prediction-box {
+        width: 45%; /* vh unit ki jagah % diya, taaki left ke saath properly fit ho */
+        height: auto; /* fixed 40vh hatao, content ke hisaab se badhne do */
+        margin-left: 0; /* extra left margin hata diya, warna overflow hoga */
+    }
+}
+
+/* -------- Tablet (758px) -------- */
+@media (max-width: 758px) {
+    .Dashboard {
+        width: 92vw; /* tablet screen ke hisaab se width */
+        margin-top: 2%; /* upar ka gap thoda kam kiya */
+        flex-direction: column; /* IMPORTANT: left aur prediction-box ab side-by-side nahi,
+                                    ek ke niche ek (column) aayenge */
+        align-items: center; /* dono center me align honge */
+        padding: 10px 0 20px 0; /* upar-neeche padding, content ke liye jagah */
+    }
+
+    .left {
+        width: 90%;
+    }
+
+    .Dashboard .left .ai-engine {
+        width: 130px; /* 8vw fixed tha, ab fixed px diya taaki chhote screen par bhi readable rahe */
+        height: 32px;
+        margin: 4%;
+        margin-bottom: 0%;
+    }
+
+    .Dashboard .left .head-1 h1 {
+        font-size: 3rem; /* bada heading (3.5rem) tablet par chhota kiya */
+        margin-left: 6%;
+        text-align: left;
+    }
+
+    .Dashboard .left .head-1 i {
+        font-size: 2.4rem;
+        margin-left: 5%;
+        font-family: instrument;
+    }
+
+    .Dashboard .left .head-2 h4 {
+        font-size: 20px; 
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 1%;
+    }
+
+    .Dashboard .left .head-3 {
+        max-width: 90%;
+        margin-left: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /* flex-shrink: 0; */
+        gap: 5px;
+    }
+
+    .Dashboard .left .head-3 .sub-1 {
+        width: 85%; 
+        margin: 0%;
+    }
+
+    /* Prediction box (right side wala card) */
+    .prediction-box {
+        width: 88%; 
+        margin-left: 0;
+        margin-top: 20px;
+        padding-bottom: 5%;
+        /* background-color: red; */
+    }
+    .prediction-box .predictor-header{
+        margin-top: 2px;
+    }
+
+    .predictor-title{
+        width: 100%;
+        margin-top: 3%;
+        /* padding-top: 0%; */
+    }
+
+    .live {
+        width: 60px; 
+        height: 32px;
+        margin-left: 40%;
+    }
+}
+
+/* -------- Mobile (600px) -------- */
+@media (max-width: 600px) {
+    .Dashboard {
+        width: 94vw;
+        margin-top: 20%;
+        border-radius: 20px; /* bade screen ka 28px thoda kam kiya */
+    }
+
+    .Dashboard::before {
+        width: 220px; /* glow effect chhota kiya, warna chhote card me overflow/heavy dikhta hai */
+        height: 220px;
+        filter: blur(50px);
+    }
+
+    .Dashboard::after {
+        width: 180px;
+        height: 180px;
+    }
+
+    .left {
+        width: 95%;
+    }
+
+    .Dashboard .left .head-1 h1 {
+        font-size: 1.8rem; /* mobile ke liye aur chhota */
+    }
+
+    .Dashboard .left .head-1 i {
+        font-size: 1.8rem;
+    }
+
+    .Dashboard .left .head-2 h4 {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .Dashboard .left .head-3 {
+        grid-template-columns: 1fr;
+        max-width: 95%;
+    }
+
+    .prediction-box {
+        width: 92%;
+        height: 70%;
+    }
+
+    .predictor-title span {
+        font-size: 0.9rem;
+    }
+
+    .stat-top {
+        font-size: 12px;
+    }
+}
+
+/* -------- Small Phones (380px) -------- */
+@media (max-width: 380px) {
+    .Dashboard {
+        width: 96vw;
+        margin-top: 25%;
+        border-radius: 16px;
+    }
+
+    .Dashboard .left .ai-engine {
+        width: 110px;
+        height: 28px;
+    }
+
+    .Dashboard .left .ai-engine h6,
+    .Dashboard .left .ai-engine i {
+        font-size: 11px;
+    }
+
+    .Dashboard .left .head-1 h1 {
+        font-size: 1.4rem; /* aur bhi chhota, 380px bahut narrow hota hai */
+        margin-left: 4%;
+    }
+
+    .Dashboard .left .head-1 i {
+        font-size: 1.4rem;
+        margin-left: 4%;
+    }
+
+    .Dashboard .left .head-2 h4 {
+        font-size: 12px;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .Dashboard .left .head-3 .sub-1 {
+        height: 40px;
+    }
+
+    .Dashboard .left .head-3 .sub-1 h5 {
+        font-size: 13px; 
+    }
+
+    .prediction-box {
+        width: 94%;
+        margin-top: 20px;
+        border-radius: 16px;
+    }
+
+    .predictor-title {
+        font-size: 13px;
+    }
+
+    .predictor-title span {
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
+
+    .live {
+        width: 50px;
+        height: 28px;
+        font-size: 11px;
+    }
+
+    .stat-top {
+        font-size: 11px;
+    }
+
+    .stat-top strong {
+        font-size: 10px;
+    }
+}
 .lastpage{
     width: 90vw;
     /* height: 90vh; */

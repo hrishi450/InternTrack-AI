@@ -13,7 +13,7 @@ const featureObserver = new IntersectionObserver(
 
     },
     {
-        threshold: 0.50
+        threshold: 0.2
     }
 );
 
