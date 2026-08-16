@@ -2613,27 +2613,258 @@ transition: transform 0.35s ease,
         font-size: 10px;
     }
 }
+
+
+/* ============================= */
+/* TESTIMONIALS SECTION */
+/* ============================= */
+
+.testimonials {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.test-badge h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffda;
+    color: #111A2D;
+    height: 25px;
+    padding: 0 16px;
+    width: fit-content;
+    border: 0.01px solid rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+
+.test-heading {
+    font-size: 2.6rem;
+    font-weight: 650;
+    text-align: center;
+    margin: 0 0 45px 0;
+    color: #111A2D;
+}
+
+.test-cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.test-card {
+    background-color: #FCFEFF;
+    border: 0.01px solid rgba(0, 0, 0, 0.212);
+    border-radius: 20px;
+    padding: 28px 26px;
+    width: 30%;
+    min-width: 280px;
+    box-sizing: border-box;
+    transition: transform 0.35s ease,
+                box-shadow 0.5s ease;
+}
+
+.test-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.12),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 14px;
+}
+
+.stars i {
+    color: #FFB400;
+    font-size: 0.95rem;
+}
+
+.quote {
+    font-size: 0.95rem;
+    font-weight: 450;
+    color: #3d3a3a;
+    line-height: 1.5;
+    margin: 0 0 24px 0;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.author-info h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #111A2D;
+    margin: 0;
+}
+
+.author-info p {
+    font-size: 0.78rem;
+    font-weight: 450;
+    color: #8B9199;
+    margin: 2px 0 0 0;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+/* Laptop / small desktop */
+@media (max-width: 1200px) {
+    .test-card {
+        width: 31%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    .testimonials {
+        width: 92%;
+        padding: 45px 0 30px 0;
+    }
+
+    .test-heading {
+        font-size: 2rem;
+        padding: 0 15px;
+    }
+
+    .test-cards {
+        gap: 18px;
+    }
+
+    .test-card {
+        width: 47%;
+        min-width: 240px;
+        padding: 24px 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .testimonials {
+        width: 90%;
+        padding: 35px 0 25px 0;
+    }
+
+    .test-heading {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .test-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .test-card {
+        width: 100%;
+        max-width: 420px;
+        min-width: unset;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .testimonials {
+        width: 94%;
+        padding: 25px 0 20px 0;
+    }
+
+    .test-badge h5 {
+        font-size: 0.8em;
+        height: 22px;
+        padding: 0 12px;
+    }
+
+    .test-heading {
+        font-size: 1.35rem;
+        line-height: 1.3;
+        margin-bottom: 22px;
+        padding: 0 8px;
+    }
+
+    .test-card {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    .stars i {
+        font-size: 0.85rem;
+    }
+
+    .quote {
+        font-size: 0.85rem;
+        margin-bottom: 18px;
+    }
+
+    .avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.7rem;
+    }
+
+    .author-info h4 {
+        font-size: 0.82rem;
+    }
+
+    .author-info p {
+        font-size: 0.72rem;
+    }
+}
+
+
 .lastpage{
     width: 90vw;
     /* height: 90vh; */
-    margin-top:10%;
+    margin-top:0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .lastpage .lastbox{
-    width: 80vw;
-    height: 60vh;
+    width: 60vw;
+    height:50vh;
     background:
     linear-gradient(
             200deg,
             #3f8ef585,
             #eceff1
         );
-    margin-top:15%;
-    margin-left: 5%;
+    margin-top:2%;
     border-radius: 25px;
     box-shadow:
         0 10px 10px rgba(0, 0, 0, 0.13),
         0 0 0 1px rgba(0, 0, 0, 0.05);
     border: 0.02px solid rgba(0, 0, 0, 0.075);
+    font-family: hmm;
 }
 
 .last1{
@@ -2648,18 +2879,20 @@ transition: transform 0.35s ease,
 }
 .last1 i{
     color: #1a90ff;
-    line-height: 0.30;
-    font-family: 'Allura',  italic;
+    line-height: 0.3;
+    font-family:instrument;
     font-size: 3.5rem;
     font-weight:500;
 }
 .last1 h2{
     font-size: 5rem;
     font-weight: 600;
+    font-family: hmm;
 }
 .last2{
     display: flex;
     justify-content: center;
+    padding-top: 8px;
 }
 .last2 h5{
     font-size: 1.1rem;
@@ -2669,6 +2902,7 @@ transition: transform 0.35s ease,
     margin: 2%;
     width: 30vw;
     text-align: center;
+    line-height: 1.2;
 }
 .last3{
     display: flex;
@@ -2711,6 +2945,170 @@ transition: transform 0.35s ease,
 }
 .last3 .sales h4{
     color: #202020;
+}
+
+/* ============================= */
+/* RESPONSIVE — ADD BELOW EXISTING CSS */
+/* ============================= */
+
+/* Laptop / small desktop */
+@media (max-width: 1200px) {
+    .lastpage .lastbox {
+        width: 75vw;
+    }
+
+    .last1 h2 {
+        font-size: 4rem;
+    }
+
+    .last1 i {
+        font-size: 3rem;
+    }
+
+    .last2 h5 {
+        width: 45vw;
+    }
+
+    .last3 .pilot {
+        width: 18vw;
+        height: 3.2vw;
+    }
+
+    .last3 .sales {
+        width: 13vw;
+        height: 3.2vw;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    .lastpage {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .lastpage .lastbox {
+        width: 90vw;
+        height: auto;
+    }
+
+    .last1 {
+        padding-top: 0px;
+        line-height: 1.1;
+    }
+
+    .last1 i {
+        font-size: 2.2rem;
+    }
+
+    .last1 h2 {
+        font-size: 3.5rem;
+        font-family: hmm;
+        text-align: center;
+    }
+
+    .last2 h5 {
+        width: 75vw;
+        font-size: 1rem;
+    }
+
+    .last3 {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .last3 .pilot {
+        width: 45vw;
+        height: 4vw;
+        /* min-height: 42px; */
+    }
+
+    .last3 .sales {
+        width: 32vw;
+        height: 6vw;
+        margin-left: 0;
+    }
+
+    .last3 h4 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .lastpage .lastbox {
+        width: 92vw;
+        border-radius: 20px;
+        /* padding: 25px 0 30px 0; */
+    }
+
+    .last1 i {
+        font-size: 1.8rem;
+    }
+
+    .last1 h2 {
+        font-size: 2.1rem;
+    }
+
+    .last2 h5 {
+        width: 82vw;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .last3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .last3 .pilot {
+        width: 70vw;
+        height: 2vh;
+    }
+
+    .last3 .sales {
+        width: 55vw;
+        height: 45px;
+        margin-left: 0;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .lastpage .lastbox {
+        width: 94vw;
+        border-radius: 16px;
+        padding: 10px 0 25px 0;
+    }
+
+    .last1 i {
+        font-size: 1.4rem;
+        font-family: instrument;
+    }
+
+    .last1 h2 {
+        font-size: 2.5rem;
+        margin: 3% ;
+    }
+
+    .last2 h5 {
+        width: 86vw;
+        font-size: 0.8rem;
+        margin: 1% 0;
+    }
+
+    .last3 .pilot,
+    .last3 .sales {
+        width: 50vw;
+        height: 4vh;
+    }
+
+    .last3 h4 {
+        font-size: 0.9rem;
+        margin: 0%;
+    }
 }
 
 .footer {
@@ -2821,4 +3219,122 @@ transition: transform 0.35s ease,
     margin: 0;
     color: #8a929e;
     font-size: 13px;
+}
+
+
+/* ============================= */
+/* RESPONSIVE — ADD BELOW EXISTING CSS */
+/* ============================= */
+
+/* Laptop / small desktop */
+@media (max-width: 1200px) {
+    .footer-main {
+        gap: 50px;
+        padding: 55px 30px 45px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 30px;
+        padding: 45px 25px 30px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 18px 25px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .footer {
+        margin-top: 35px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 35px 20px 25px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-brand > p {
+        margin: 12px 0 20px;
+        font-size: 14px;
+    }
+
+    .social {
+        gap: 18px;
+    }
+
+    .footer-column {
+        gap: 12px;
+    }
+
+    .footer-bottom {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+    .footer-main {
+        padding: 25px 16px 20px;
+        gap: 24px;
+    }
+
+    .brand-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .brand-name h3 {
+        font-size: 17px;
+    }
+
+    .footer-brand > p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .social a {
+        font-size: 15px;
+    }
+
+    .social {
+        gap: 14px;
+    }
+
+    .footer-column h4 {
+        font-size: 14px;
+    }
+
+    .footer-column a {
+        font-size: 13px;
+    }
+
+    .footer-bottom {
+        padding: 14px 16px;
+    }
+
+    .footer-bottom p {
+        font-size: 11.5px;
+        text-align: center;
+    }
 }
