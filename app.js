@@ -61,7 +61,7 @@ dashboard.addEventListener("mousemove", function(e) {
 
 });
 
-
+//NAVBAR RESPOSIVE
   const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     const navLogin = document.getElementById('navLogin');
@@ -93,8 +93,11 @@ playBtn.addEventListener('click', () => {
     pauseIcon.style.display = 'block';
     playBtn.style.height = "20px";
     playBtn.style.width = "20px";
-    muteBtn.style.display = "none";
-    fullscreenBtn.style.display = "none";
+    muteBtn.style.height = "20px";
+    muteBtn.style.width = "20px";
+    fullscreenBtn.style.height = "20px";
+    fullscreenBtn.style.width = "20px";
+   
 
   } else {
     video.pause();

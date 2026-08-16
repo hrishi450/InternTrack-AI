@@ -233,21 +233,22 @@ body {
     }
     .login {
         display: none;
-        width: 100%;
+        width: 40%;
         order: 4;
         margin: 0;
         justify-content: center;
         gap: 12px;
-        padding: 12px 0 4px 0;
-    }
+        padding: 0px 0 4px 80%;
+        }
     .login.active {
         display: flex;
+      
     }
-    .sign1, .sign2 {
+    .sign2 {
         width: auto;
         flex: 1;
-        max-width: 160px;
-        padding: 0 16px;
+        max-width: 60px;
+        padding: 0 56px;
     }
     .menu-btn {
         display: flex;
@@ -308,7 +309,7 @@ body {
     .login {
         flex-direction: column;
     }
-    .sign1, .sign2 {
+    .sign1,.sign2 {
         max-width: 100%;
         width: 100%;
     }
@@ -1125,6 +1126,195 @@ transition: transform 0.35s ease,
         transform: translateY(0) scale(1);
     }
 
+}
+
+/* ============================= */
+/* RESPONSIVE — ADD BELOW EXISTING CSS */
+/* ============================= */
+
+/* Laptop / small desktop */
+@media (max-width: 1200px) {
+    .fea-3 .box1,
+    .fea-3 .box2,
+    .fea-3 .box3,
+    .fea-3 .box4 {
+        width: 22vw;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .features {
+        height: auto;
+        width: 95vw;
+        margin-bottom: 8%;
+    }
+    .fea-3 {
+        height: auto;
+        width: 100%;
+    }
+    .fea-3 .boxes-1,
+    .fea-3 .boxes-2 {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        justify-content: center;
+    }
+    .fea-3 .box1,
+    .fea-3 .box2,
+    .fea-3 .box3,
+    .fea-3 .box4 {
+        width: 45%;
+        height: auto;
+        min-height: 25vh;
+        padding: 20px 20px 20px 25px;
+    }
+    .fea-2 h4 {
+        font-size: 2.4rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+    .fea-2 i {
+        font-size: 2.4rem;
+    }
+    .fea-2 h5 {
+        text-align: center;
+        padding: 0 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .features {
+        width: 100vw;
+        margin-top: 40px;
+        padding: 0 4%;
+        box-sizing: border-box;
+    }
+    .fea-2 h4 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+    .fea-2 i {
+        font-size: 1.7rem;
+    }
+    .fea-2 h5 {
+        font-size: 1rem;
+        line-height: 1.3;
+        padding: 0 5px;
+    }
+    .fea-3 .boxes-1,
+    .fea-3 .boxes-2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-top: 20px;
+    }
+    .fea-3 .box1,
+    .fea-3 .box2,
+    .fea-3 .box3,
+    .fea-3 .box4 {
+        width: 100%;
+        max-width: 400px;
+        min-height: auto;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    .fea-3 .box1 h6,
+    .fea-3 .box2 h6,
+    .fea-3 .box3 h6,
+    .fea-3 .box4 h6 {
+        white-space: normal; /* <br> मुळे टेक्स्ट overflow होऊ नये */
+    }
+    .fea-1 h5 {
+        margin-top: 20px;
+    }
+}
+/* Small phones */
+@media (max-width: 380px) {
+    .features {
+        margin-top: 30px;
+        padding: 0 3%;
+        background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.7),
+        transparent
+    );
+    }
+
+    .fea-1 h5 {
+        width: 30%;
+        height: 2;
+        font-size: 1em;
+        font-weight: 600;
+        font-family: hmm;
+        margin-top: 5%;
+        padding-top: 1%;
+    }
+
+    .fea-2 h4 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        padding: 0 4px;
+        font-family: hmm;
+    }
+
+    .fea-2 i {
+        font-size: 1.35rem;
+        font-family: instrument;
+    }
+
+    .fea-2 h5 {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        padding: 0 8px;
+        margin: 2%;
+    }
+
+    .fea-3 .boxes-1,
+    .fea-3 .boxes-2 {
+        gap: 12px;
+        margin-top: 16px;
+    }
+
+    .fea-3 .box1,
+    .fea-3 .box2,
+    .fea-3 .box3,
+    .fea-3 .box4 {
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .fea-3 .box1 i,
+    .fea-3 .box2 i,
+    .fea-3 .box3 i,
+    .fea-3 .box4 i {
+        height: 34px;
+        width: 34px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .fea-3 .box1 h4,
+    .fea-3 .box2 h4,
+    .fea-3 .box3 h4,
+    .fea-3 .box4 h4 {
+        font-size: 0.95rem;
+        font-family: hmm;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .fea-3 .box1 h6,
+    .fea-3 .box2 h6,
+    .fea-3 .box3 h6,
+    .fea-3 .box4 h6 {
+        font-size: 0.82rem;
+        line-height: 1.35;
+        margin-bottom: 1%;
+    }
 }
 
 .role{
