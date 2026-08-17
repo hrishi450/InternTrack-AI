@@ -121,7 +121,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
     white-space: nowrap;
 }
 
@@ -146,7 +146,7 @@ body {
 
 .sign2:hover {
     background-color: #336fdb;
-    transform: translateY(-2px);
+    transform:scale(1.1);
 }
 
 .sign2 i {
@@ -444,7 +444,6 @@ body {
     font-size: 4.5em;
     font-weight: 550;
     width: 60vw;
-        opacity: 0;
 }
 
 .heading i{
@@ -464,7 +463,6 @@ body {
     margin: 0%;
     color: #636A76;
     text-align:center;
-    opacity: 0;
 }
 
 .heading2 h3{
@@ -475,7 +473,6 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    opacity: 0;
 }
 
 .heading3 .btn1{
@@ -516,7 +513,7 @@ body {
     padding-right: 5px;
     padding-top: 2px;
      transition: 
-        transform 0.3s ease,
+        transform 0.5s ease,
         box-shadow 0.3s ease,
         border-color 0.3s ease,
         color 0.8s ease;
@@ -533,7 +530,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
-    opacity: 0;
 }
 
 
@@ -657,7 +653,6 @@ body {
         0 8px 20px rgba(0,0,0,0.4),
         inset 0 1px 0 rgba(255,255,255,0.08);
     z-index: 5;
-    opacity: 0;
     transition: opacity 0.35s ease;
 }
 
@@ -791,7 +786,7 @@ body {
     border: 0.01px solid rgba(0, 0, 0, 0.212);
     border-radius: 5%;
     padding-left: 25px;
-    transition: transform 0.35s ease,
+    transition: transform 0.5s ease,
                 box-shadow 0.5s ease,
                 border-color 0.5s ease;
 }
@@ -1152,20 +1147,6 @@ transition: transform 0.35s ease,
     }
 }
 
-@media (max-width: 380px) {
-
-    /* ===== Right-side slide-in override ===== */
-    .features .fea-1,
-    .features .fea-2,
-    .features .box1,
-    .features .box2,
-    .features .box3,
-    .features .box4 {
-    opacity: 0;
-    
-    }
-
-}
 
 .role{
     /* background-color: red; */
