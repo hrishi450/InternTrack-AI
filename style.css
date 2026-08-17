@@ -54,7 +54,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* background-color: #4487FF; placeholder so it's visible without the actual image */
     border-radius: 8px;
 }
 
@@ -181,9 +180,8 @@ body {
     transform: scale(1.05);
 }
 
-/* ============================================================
-   TABLET (≤1024px) — links थोडे compress, gap कमी
-   ============================================================ */
+   /* TABLET (≤1024px) — links थोडे compress, gap कमी */
+   
 @media (max-width: 1024px) {
     body {
         margin: 0px 30px;
@@ -201,9 +199,9 @@ body {
     }
 }
 
-/* ============================================================
-   TABLET / SMALL LAPTOP (≤900px) — hamburger menu चालू
-   ============================================================ */
+
+   /* TABLET / SMALL LAPTOP (≤900px) — hamburger menu चालू */
+   
 @media (max-width: 900px) {
     body {
         margin: 0px 16px;
@@ -255,9 +253,9 @@ body {
     }
 }
 
-/* ============================================================
-   MOBILE (≤600px)
-   ============================================================ */
+
+   /* MOBILE (≤600px) */
+   
 @media (max-width: 600px) {
     body {
         margin: 0px 10px;
@@ -280,9 +278,8 @@ body {
     }
 }
 
-/* ============================================================
-   SMALL MOBILE (≤380px)
-   ============================================================ */
+
+   /* SMALL MOBILE (≤380px) */
 @media (max-width: 380px) {
     body {
         margin: 0px 6px;
@@ -438,28 +435,8 @@ body {
     font-weight:550;
     height: 70px;
     margin: 0%;
-    animation: headingEnter 2s cubic-bezier(.16,1,.3,1) forwards;
 }
-@keyframes headingEnter {
-    0% {
-        opacity: 0;
-        transform:
-            perspective(1000px)
-            translateY(100px)
-            rotateX(25deg)
-            scale(0.85);
-        filter: blur(10px);
-    }
-    100% {
-        opacity: 1;
-        transform:
-            perspective(1000px)
-            translateY(0)
-            rotateX(0deg)
-            scale(1);
-        filter: blur(0);
-    }
-}
+
 .heading h2{
     display: flex;
     justify-self:center;
@@ -467,32 +444,9 @@ body {
     font-size: 4.5em;
     font-weight: 550;
     width: 60vw;
-    animation: headingSecond 2s cubic-bezier(.16,1,.3,1) 0.15s forwards;
-    opacity: 0;
-}
-@keyframes headingSecond {
-
-    0% {
         opacity: 0;
-        transform:
-            perspective(1000px)
-            translateY(80px)
-            rotateX(-15deg)
-            scale(0.9);
-        filter: blur(8px);
-    }
-
-    100% {
-        opacity: 1;
-        transform:
-            perspective(1000px)
-            translateY(0)
-            rotateX(0)
-            scale(1);
-        filter: blur(0);
-    }
-
 }
+
 .heading i{
     display: flex;
     justify-content: center;
@@ -510,23 +464,9 @@ body {
     margin: 0%;
     color: #636A76;
     text-align:center;
-    animation: subtitleEnter 1s ease 0.6s forwards;
     opacity: 0;
 }
-@keyframes subtitleEnter {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-        filter: blur(5px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
-    }
-
-}
 .heading2 h3{
     font-weight: 600;
 }
@@ -535,30 +475,9 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    animation: buttonsEnter 2s cubic-bezier(.16,1,.3,1) 1.1s forwards;
     opacity: 0;
 }
-@keyframes buttonsEnter {
 
-    from {
-        opacity: 0;
-        transform:
-            perspective(800px)
-            translateY(40px)
-            rotateX(10deg)
-            scale(0.9);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            perspective(800px)
-            translateY(0)
-            rotateX(0)
-            scale(1);
-    }
-
-}
 .heading3 .btn1{
     background-color: #4487FF;
     height: 40px;
@@ -614,22 +533,9 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px;
-    animation: verifyEnter 1s ease 1.1s forwards;
     opacity: 0;
 }
-@keyframes verifyEnter {
 
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
 
 .heading4 i{
     color: green;
@@ -846,7 +752,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
     padding: 0%;
 }
 
@@ -873,7 +778,6 @@ body {
 .fea-3{
     height: 98vh;
     width: 90vw;
-    /* background-color: red; */
 }
 .fea-3 .boxes-1{
     display: flex;
@@ -884,7 +788,7 @@ body {
     background-color:#FCFEFF;
     height: 30vh;
     width: 19vw;
-     border: 0.01px solid rgba(0, 0, 0, 0.212);
+    border: 0.01px solid rgba(0, 0, 0, 0.212);
     border-radius: 5%;
     padding-left: 25px;
     transition: transform 0.35s ease,
@@ -927,7 +831,7 @@ body {
     background-color:#FCFEFF;
     height: 30vh;
     width: 19vw;
-     border: 0.01px solid rgba(0, 0, 0, 0.212);
+    border: 0.01px solid rgba(0, 0, 0, 0.212);
     border-radius: 5%;
     padding-left: 25px;
     transition: transform 0.35s ease,
@@ -1060,77 +964,7 @@ transition: transform 0.35s ease,
     margin-top: 10px;
 }
 
-/* ============================= */
-/* FEATURES SCROLL ANIMATION */
-/* ============================= */
-
-.features .fea-1,
-.features .fea-2,
-.features .box1,
-.features .box2,
-.features .box3,
-.features .box4 {
-    opacity: 0;
-    transform: translateY(10px) scale(0.96);
-}
-
-/* Animation start */
-
-.features.show .fea-1 {
-    animation: featureReveal 0.8s ease forwards;
-     animation-delay: 0.15s;
-}
-
-.features.show .fea-2 {
-    animation: featureReveal 0.8s ease 0.30s forwards;
-     animation-delay: 0.30s;
-}
-
-.features.show .box1 {
-    animation: featureReveal 0.7s ease 0.30s forwards;
-     animation-delay:0.45s;
-}
-
-.features.show .box2 {
-    animation: featureReveal 0.7s ease 0.30s forwards;
-     animation-delay: 0.60s;
-}
-
-.features.show .box3 {
-    animation: featureReveal 0.7s ease 0.30s forwards;
-     animation-delay: 0.75s;
-}
-
-.features.show .box4 {
-    animation: featureReveal 0.7s ease 0.30s forwards;
-     animation-delay: 0.90s;
-}
-
-
-/* Main Animation */
-
-@keyframes featureReveal {
-
-    0% {
-        opacity: 0;
-        transform: translateY(10px) scale(0.96);
-    }
-    
-    60% {
-        opacity: 1;
-        transform: translateY(-5px) scale(1.01);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-}
-
-/* ============================= */
 /* RESPONSIVE — ADD BELOW EXISTING CSS */
-/* ============================= */
 
 /* Laptop / small desktop */
 @media (max-width: 1200px) {
@@ -1223,7 +1057,7 @@ transition: transform 0.35s ease,
     .fea-3 .box2 h6,
     .fea-3 .box3 h6,
     .fea-3 .box4 h6 {
-        white-space: normal; /* <br> मुळे टेक्स्ट overflow होऊ नये */
+        white-space: normal;
     }
     .fea-1 h5 {
         margin-top: 20px;
@@ -1274,6 +1108,7 @@ transition: transform 0.35s ease,
     .fea-3 .boxes-1,
     .fea-3 .boxes-2 {
         gap: 12px;
+
         margin-top: 16px;
     }
 
@@ -1319,8 +1154,6 @@ transition: transform 0.35s ease,
 
 @media (max-width: 380px) {
 
-    /* ... तुमचा आधीचा 380px चा CSS इथेच ठेवा ... */
-
     /* ===== Right-side slide-in override ===== */
     .features .fea-1,
     .features .fea-2,
@@ -1328,54 +1161,10 @@ transition: transform 0.35s ease,
     .features .box2,
     .features .box3,
     .features .box4 {
-        opacity: 0;
-        transform: translateX(60px);   /* उजवीकडून सुरुवात */
+    opacity: 0;
+    
     }
 
-    .features.show .fea-1 {
-        animation: featureRevealRight 0.7s ease forwards;
-        animation-delay: 0.15s;
-    }
-
-    .features.show .fea-2 {
-        animation: featureRevealRight 0.7s ease forwards;
-        animation-delay: 0.30s;
-    }
-
-    .features.show .box1 {
-        animation: featureRevealRight 0.6s ease forwards;
-        animation-delay: 0.45s;
-    }
-
-    .features.show .box2 {
-        animation: featureRevealRight 0.6s ease forwards;
-        animation-delay: 1s;
-    }
-
-    .features.show .box3 {
-        animation: featureRevealRight 0.6s ease forwards;
-        animation-delay:1.5s;
-    }
-
-    .features.show .box4 {
-        animation: featureRevealRight 0.6s ease forwards;
-        animation-delay: 2s;
-    }
-
-    @keyframes featureRevealRight {
-        0% {
-            opacity: 0;
-            transform: translateX(60px);
-        }
-        60% {
-            opacity: 1;
-            transform: translateX(-6px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
 }
 
 .role{
@@ -1636,74 +1425,9 @@ transition: transform 0.35s ease,
     padding: 5px;
 }
 
-/* ROLE SECTION LOADING ANIMATION */
 
-.role1,
-.role2 .box1,
-.role2 .box2,
-.role2 .box3,
-.role2 .box4 {
-    opacity: 0;
-    transform: translateY(35px);
-}
-
-/* Heading animation */
-.role.show .role1 {
-    animation: roleHeading 0.8s ease forwards;
-}
-
-/* Boxes animation - one by one */
-.role.show .box1 {
-    animation: roleBoxLoad 0.8s ease forwards;
-    animation-delay: 0.15s;
-}
-
-.role.show .box2 {
-    animation: roleBoxLoad 0.8s ease forwards;
-    animation-delay: 0.30s;
-}
-
-.role.show .box3 {
-    animation: roleBoxLoad 0.8s ease forwards;
-    animation-delay: 0.45s;
-}
-
-.role.show .box4 {
-    animation: roleBoxLoad 0.8s ease forwards;
-    animation-delay: 0.60s;
-}
-
-
-/* Heading */
-@keyframes roleHeading {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Boxes */
-@keyframes roleBoxLoad {
-    from {
-        opacity: 0;
-        transform: translateY(40px) scale(0.96);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-/* ============================= */
 /* RESPONSIVE — ADD BELOW EXISTING CSS */
-/* ============================= */
+
 
 /* Laptop / small desktop */
 @media (max-width: 1200px) {
@@ -2080,21 +1804,16 @@ transition: transform 0.35s ease,
 .Dashboard::after {
     content: "";
     position: absolute;
-
     width: 300px;
     height: 300px;
-
     border-radius: 50%;
-
     background:
         radial-gradient(
             circle,
             rgba(51, 105, 243, 0.25),
             transparent 70%
         );
-
     filter: blur(20px);
-
     left: -150px;
     top: -150px;
 }
@@ -2109,32 +1828,23 @@ transition: transform 0.35s ease,
 
 .mouse-glow {
     position: absolute;
-
     width: 220px;
     height: 220px;
-
     border-radius: 50%;
-
     background: radial-gradient(
         circle,
         rgba(51, 105, 243, 0.30),
         rgba(51, 105, 243, 0.10),
         transparent 70%
     );
-
     filter: blur(15px);
-
     pointer-events: none;
-
     transform: translate(-50%, -50%);
-
     left: 50%;
     top: 50%;
-
     transition:
         left 0.15s ease-out,
         top 0.15s ease-out;
-
     z-index: 0;
 }
 .Dashboard > *:not(.mouse-glow) {
@@ -2155,7 +1865,7 @@ transition: transform 0.35s ease,
     border-radius: 25px;
     border: 0.01px solid rgba(0, 0, 0, 0.137);
     box-shadow:
-        0 30px 80px rgba(33, 34, 36, 0.12);
+    0 30px 80px rgba(33, 34, 36, 0.12);
     margin-bottom: 0%;
 }
 .Dashboard .left .ai-engine i{
@@ -2183,8 +1893,8 @@ transition: transform 0.35s ease,
     /* margin-bottom: 0%; */
     padding-top: 0%;
     color: #1a90ff;
-        line-height: 0.70;
-         font-family: 'Allura',  italic;
+    line-height: 0.70;
+    font-family: 'Allura',  italic;
 }
 
 .Dashboard .left .head-2 h4{
@@ -2199,7 +1909,7 @@ transition: transform 0.35s ease,
 .Dashboard .left .head-3{
    display: grid;
     margin-left: 8%;
-     grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 13px 35px;
     max-width: 40%;
 }
