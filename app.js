@@ -14,23 +14,7 @@ dashboard.addEventListener("mousemove", function(e) {
 
 });
 
-//NAVBAR RESPOSIVE
-//   const menuBtn = document.getElementById('menuBtn');
-//     const navLinks = document.getElementById('navLinks');
-//     const navLogin = document.getElementById('navLogin');
-//     const icon = menuBtn.querySelector('i');
-
-//     menuBtn.addEventListener('click', () => {
-//         navLinks.classList.toggle('active');
-//         navLogin.classList.toggle('active');
-//         const isOpen = navLinks.classList.contains('active');
-//         icon.classList.toggle('fa-bars', !isOpen);
-//         icon.classList.toggle('fa-xmark', isOpen);
-//     });
-
-
-// MENU  btn 
-
+// MENU  BUTTON 
 
 let menuBtn = document.querySelector('#menuBtn');
 let nav = document.getElementById('nav');
@@ -67,6 +51,7 @@ let content = document.querySelector('#navLinks');
 
 
 // VIDEO SECTION
+
 const video = document.getElementById('myVideo');
 const playBtn = document.getElementById('playBtn');
 const playIcon = document.getElementById('playIcon');
@@ -80,6 +65,9 @@ let demo = document.querySelector('.btn2');
 
       demo.addEventListener('click', (dets)=>{
           video.play();
+          video.scrollIntoView({
+            behavior:"smooth"
+          });
     if (video.play) {
     playIcon.style.display = 'none';
     pauseIcon.style.display = 'block';
@@ -124,4 +112,37 @@ fullscreenBtn.addEventListener('click', () => {
   } else if (video.webkitRequestFullscreen) {
     video.webkitRequestFullscreen();
   }
+});
+
+
+
+// PAGE SECTION
+
+
+let feature = document.getElementById("feature");
+feature.addEventListener("click", function () {
+document.querySelector(".features").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+let Role = document.getElementById("role");
+Role.addEventListener('click', function () {
+      document.querySelector(".role").scrollIntoView({
+        behavior : "smooth"
+      });
+});
+
+let Ai = document.getElementById("ai");
+Ai.addEventListener('click', function() {
+    document.querySelector(".Dashboard").scrollIntoView({
+      behavior : "smooth"
+    });
+});
+
+let impact = document.getElementById("impact");
+impact.addEventListener('click', function(){
+  document.querySelector(".testimonials").scrollIntoView({
+    behavior:"smooth"
+  });
 });
