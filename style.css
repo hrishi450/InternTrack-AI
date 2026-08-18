@@ -106,7 +106,7 @@ body {
 
 .login {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 10px;
     padding: 0;
     margin-left: auto;
@@ -160,14 +160,14 @@ body {
 /* Hamburger button - hidden on desktop */
 .menu-btn {
     display: none;
-    width: 38px;
-    height: 38px;
+    width: 45px;
+    height: 45px;
     margin-left: auto;
     border: none;
     border-radius: 10px;
     background: #EDF4FF;
     color: #3369F3;
-    font-size: 17px;
+    font-size: 25px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -178,6 +178,22 @@ body {
 .menu-btn:hover {
     background: #dce9ff;
     transform: scale(1.05);
+}
+#xBar{
+    display: none;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    /* background: #EDF4FF; */
+    color: #e63737;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 2% 2%;
+    align-self: center;
+    justify-self:center;
+    flex-shrink: 0;
+    font-size: 1.8em;
 }
 
    /* TABLET (≤1024px) — links थोडे compress, gap कमी */
@@ -212,51 +228,22 @@ body {
         justify-content: space-between;
         position: relative;
     }
-    /* मधले links लपवा, hamburger dropdown मध्ये दाखवू */
-    .content {
-        display: none;
+      .sign2 {
+        max-width: 100%;
         width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        order: 3;
+        /* margin-left: 30%; */
     }
-    .content.active {
-        display: flex;
-    }
-    .content h5 {
+    .sign1{
         width: 100%;
-        padding: 12px 10px;
-        border-top: 1px solid rgba(0,0,0,0.06);
+
     }
-    .login {
-        display: none;
-        width: 40%;
-        order: 4;
-        margin: 0;
-        justify-content: center;
-        gap: 12px;
-        padding: 0px 0 4px 80%;
-        }
-    .login.active {
-        display: flex;
-      
-    }
-    .sign2 {
-        width: auto;
-        flex: 1;
-        max-width: 60px;
-        padding: 0 56px;
-    }
-    .menu-btn {
-        display: flex;
-    }
+   
 }
 
 
    /* MOBILE (≤600px) */
    
-@media (max-width: 600px) {
+@media (max-width: 660px) {
     body {
         margin: 0px 10px;
     }
@@ -266,6 +253,7 @@ body {
         top: 8px;
         margin: 12px auto;
     }
+
     .text h3 {
         font-size: 17px;
     }
@@ -276,6 +264,33 @@ body {
         height: 34px;
         width: 34px;
     }
+    
+    .content{
+        display: none;
+    }
+
+    .active{       
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            margin: 0%;
+    }
+    
+    .menu-btn{
+        display: flex;
+        margin: 0%;
+    }
+     .sign2 {
+        max-width: 100%;
+        width: 100%;
+        /* margin-left: 30%; */
+
+    }
+    .sign1{
+        max-width: 100%;
+        width: 100%;
+    }
+
 }
 
 
@@ -288,28 +303,58 @@ body {
         padding: 6px 8px;
         gap: 6px;
     }
+    
     .text h3 {
-        font-size: 15px;
+        font-size:20px;
     }
     .text p {
-        font-size: 15px;
+        font-size: 20px;
     }
     .logo {
         height: 30px;
         width: 30px;
     }
     .menu-btn {
-        width: 34px;
-        height: 34px;
+        width: 40px;
+        height: 40px;
         font-size: 15px;
     }
-    .login {
+    .active{       
+            height: 50vh;
+            width: 100vw;
+            /* background-color: red; */
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-self: flex-end;
+            margin: 0%;
+    }
+     .content{
+        display: none;
         flex-direction: column;
+        width: 80vw;
+        margin: 0%;
+        margin-top: 0%;
+        text-align-last: left;
     }
-    .sign1,.sign2 {
-        max-width: 100%;
-        width: 100%;
+    .content h5{
+        font-size:2em;
     }
+    .content:hover{
+        color: #000000;
+    }
+    .login {
+        margin: 0%;
+    }
+    .sign2 {
+        /* max-width: 100%; */
+        width: 25vw;
+        font-size: 12px;
+    }
+    .sign1{
+        display: none;
+    }
+    
 }
 
 
