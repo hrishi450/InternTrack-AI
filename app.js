@@ -2,17 +2,19 @@
 const dashboard = document.querySelector(".Dashboard");
 const glow = document.querySelector(".mouse-glow");
 
-dashboard.addEventListener("mousemove", function(e) {
+dashboard.addEventListener("mousemove", function (e) {
 
-    const rect = dashboard.getBoundingClientRect();
+  const rect = dashboard.getBoundingClientRect();
 
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
 
-    glow.style.left = x + "px";
-    glow.style.top = y + "px";
+  glow.style.left = x + "px";
+  glow.style.top = y + "px";
 
 });
+
+
 
 // MENU  BUTTON 
 
@@ -26,27 +28,28 @@ let content = document.querySelector('#navLinks');
 
 
 
-     menuBtn.addEventListener('click',(det) => {
-        nav.classList.add('active');
-      if((det.target.parentElement)){
-        logo.style.display = 'none';
-        logoText.style.display = 'none';
-        menuBtn.style.display = 'none';
-        xBar.style.display = 'flex';
-        content.style.display ='flex';
-        login.style.width = '35px';
-      } 
+menuBtn.addEventListener('click', (det) => {
+  nav.classList.add('active');
+  if ((det.target.parentElement)) {
+    logo.style.display = 'none';
+    logoText.style.display = 'none';
+    menuBtn.style.display = 'none';
+    xBar.style.display = 'flex';
+    content.style.display = 'flex';
+    login.style.width = '35px';
+  }
 
-    } );
-      xBar.addEventListener('click',()=>{
-         nav.classList.remove('active');
-            menuBtn.style.display ='flex'; 
-            xBar.style.display = 'none'; 
-            logo.style.display = 'flex';
-            logoText.style.display = 'flex';
-          content.style.display = 'none';
-          login.style.display = 'none';
-      });
+
+});
+xBar.addEventListener('click', () => {
+  nav.classList.remove('active');
+  menuBtn.style.display = 'flex';
+  xBar.style.display = 'none';
+  logo.style.display = 'flex';
+  logoText.style.display = 'flex';
+  content.style.display = 'none';
+  login.style.display = 'none';
+});
 
 
 
@@ -63,12 +66,12 @@ const fullscreenBtn = document.getElementById('fullscreenBtn');
 
 let demo = document.querySelector('.btn2');
 
-      demo.addEventListener('click', (dets)=>{
-          video.play();
-          video.scrollIntoView({
-            behavior:"smooth"
-          });
-    if (video.play) {
+demo.addEventListener('click', (dets) => {
+  video.play();
+  video.scrollIntoView({
+    behavior: "smooth"
+  });
+  if (video.play) {
     playIcon.style.display = 'none';
     pauseIcon.style.display = 'block';
     playBtn.style.height = "20px";
@@ -77,8 +80,8 @@ let demo = document.querySelector('.btn2');
     muteBtn.style.width = "20px";
     fullscreenBtn.style.height = "20px";
     fullscreenBtn.style.width = "20px";
-  } 
-    
+  }
+
 });
 playBtn.addEventListener('click', () => {
   if (video.paused) {
@@ -91,7 +94,7 @@ playBtn.addEventListener('click', () => {
     muteBtn.style.width = "20px";
     fullscreenBtn.style.height = "20px";
     fullscreenBtn.style.width = "20px";
-   
+
 
   } else {
     video.pause();
@@ -121,28 +124,29 @@ fullscreenBtn.addEventListener('click', () => {
 
 let feature = document.getElementById("feature");
 feature.addEventListener("click", function () {
-document.querySelector(".features").scrollIntoView({
-        behavior: "smooth"
-    });
+  document.querySelector(".features").scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
 let Role = document.getElementById("role");
 Role.addEventListener('click', function () {
-      document.querySelector(".role").scrollIntoView({
-        behavior : "smooth"
-      });
+  document.querySelector(".role").scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
 let Ai = document.getElementById("ai");
-Ai.addEventListener('click', function() {
-    document.querySelector(".Dashboard").scrollIntoView({
-      behavior : "smooth"
-    });
+Ai.addEventListener('click', function () {
+  document.querySelector(".Dashboard").scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
 let impact = document.getElementById("impact");
-impact.addEventListener('click', function(){
+impact.addEventListener('click', function () {
   document.querySelector(".testimonials").scrollIntoView({
-    behavior:"smooth"
+    behavior: "smooth"
   });
 });
+
