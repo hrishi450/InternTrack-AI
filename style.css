@@ -53,7 +53,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("logo 2.png");
+    background-image: url("material/logo\ 2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -3303,7 +3303,7 @@ i {
 .get-logo .getlogo-img {
     width: 30px;
     height: 30px;
-    background-image: url("logo 2.png");
+    background-image: url("material/logo\ 2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -3613,42 +3613,742 @@ i {
     pointer-events: none;
 }
 
-
-/* Student - Blue */
 .student::before {
     background: #4d9cff;
     top: -60px;
-    right: -40px;
+    left: 10px;
 }
 
-
-/* Company - Purple */
 .company::before {
-    background: #a477ff;
+    background: #29eaf8;
     top: -60px;
-    right: -40px;
+    left: 10px;
 }
 
-
-/* College - Green */
 .college::before {
-    background: #78a879;
-    top: -60px;
-    right: -40px;
-}
-
-
-/* Mentor - Orange */
-.mentor::before {
     background: #ff9b55;
     top: -60px;
-    right: -40px;
+    left: 10px;
+}
+
+.mentor::before {
+    background: #7bff00;
+    top: -60px;
+    left: 10px;
+}
+
+.admin::before {
+    background: #fd7fa5;
+    top: -60px;
+    left: 10px;
+}
+
+.auth-page {
+    width: min(100%, 1200px);
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 28px 35px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-home,
+.choose-role {
+    text-decoration: none;
+    color: #40516d;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.back-home:hover,
+.choose-role:hover {
+    color: #2476d9;
 }
 
 
-/* Super Admin - Pink */
-.admin::before {
-    background: #ff6f9b;
-    top: -60px;
-    right: -40px;
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #2e4d7d;
+}
+
+.logo-icon {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.logo-icon img {
+    height: 80px;
+    width: 80px;
+}
+
+.choose-role {
+    margin-top: 34px;
+}
+
+.auth-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 20px; */
+    align-items: center;
+    margin-top: 25px;
+}
+
+.portal-info {
+    min-height: 20vh;
+    width: 37vw;
+    padding: 25px;
+    /* margin-left: 5%; */
+    border-radius: 22px;
+    border: 1px solid rgba(100, 120, 150, 0.18);
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.65),
+            rgba(225, 239, 255, 0.60));
+    box-shadow:
+        0 12px 35px rgba(40, 70, 110, 0.05);
+    overflow: hidden;
+}
+
+.auth-main::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    filter: blur(55px);
+    opacity: 0.35;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.auth-main::before {
+    background: #328eff;
+    top: 150px;
+    left: 50px;
+    z-index: 1;
+}
+
+.big-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #2478da;
+    color: white;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.portal-info h1 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0%;
+    color: #263650;
+}
+
+.portal-info p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #5d6c83;
+    /* margin-bottom: 22px; */
+}
+
+.portal-info ul {
+    padding-left: 20px;
+    color: #52637c;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.portal-info li::marker {
+    color: #2679dc;
+}
+
+.login-card {
+    padding: 32px;
+    border-radius: 22px;
+    border: 1px solid rgba(100, 120, 150, 0.20);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+        0 15px 40px rgba(35, 55, 90, 0.08);
+}
+
+.login-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 25px;
+}
+
+.small-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: white;
+    background: #277bdc;
+}
+
+.login-heading h2 {
+    font-size: 18px;
+    margin-bottom: 3px;
+    color: #283952;
+}
+
+.login-heading p {
+    font-size: 12px;
+    color: #68768b;
+}
+
+.auth-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 40px;
+    border-radius: 12px;
+    background: #edf1f7;
+    margin-bottom: 24px;
+    padding: 2px;
+}
+
+.auth-tabs button {
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #627087;
+    cursor: pointer;
+}
+
+.auth-tabs button.active {
+    background: white;
+    color: #40536f;
+    box-shadow: 0 2px 8px rgba(50, 70, 100, 0.08);
+}
+
+form>label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #43536c;
+    margin-bottom: 7px;
+    margin-top: 16px;
+}
+
+.input-box {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 12px;
+    border-radius: 10px;
+    border: 1px solid #d4dce7;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.input-box i {
+    color: #718097;
+    font-size: 14px;
+}
+
+.input-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #263650;
+    font-size: 13px;
+}
+
+.input-box:focus-within {
+    border-color: #3b8be2;
+    box-shadow: 0 0 0 3px rgba(59, 139, 226, 0.10);
+}
+
+.login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 17px 0;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: #627087;
+}
+
+.remember input {
+    accent-color: #3291dd;
+}
+
+.login-options a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #5480b0;
+}
+
+.login-btn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: #258bdc;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    background: #1677c7;
+    transform: translateY(-1px);
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    color: #8994a5;
+    font-size: 12px;
+}
+
+.or::before,
+.or::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #dce2ea;
+}
+
+.google-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #d7dee8;
+    background: rgba(255, 255, 255, 0.55);
+    color: #52637a;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.google-btn i {
+    color: #4285f4;
+    margin-right: 8px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .auth-page {
+        padding: 22px 18px;
+    }
+
+    .auth-main {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .portal-info {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .auth-header {
+        align-items: flex-start;
+    }
+
+    .auth-logo {
+        font-size: 14px;
+    }
+
+    .portal-info,
+    .login-card {
+        padding: 24px;
+    }
+
+    .portal-info h1 {
+        font-size: 27px;
+    }
+
+}
+
+.hidden {
+    display: none;
+}
+
+.two-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.terms-text {
+    margin: 16px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #718097;
+}
+
+/* =========================
+   RESPONSIVE - 380px
+========================= */
+
+@media (max-width: 380px) {
+
+    /* MAIN */
+
+    .auth-page {
+        width: 100%;
+        min-height: 100vh;
+
+        padding: 16px 12px;
+
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .auth-header {
+        width: 100%;
+
+        align-items: center;
+    }
+
+    .back-home {
+        font-size: 11px;
+    }
+
+    .auth-logo {
+        font-size: 12px;
+
+        gap: 5px;
+    }
+
+    .logo-icon {
+        width: 28px;
+        height: 28px;
+
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       CHOOSE ROLE
+    ========================= */
+
+    .choose-role {
+        margin-top: 20px;
+
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
+    .auth-main {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 16px;
+
+        margin-top: 18px;
+    }
+
+
+    /* =========================
+       PORTAL INFO
+    ========================= */
+
+    .portal-info {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 20px;
+
+        border-radius: 18px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .portal-info::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        filter: blur(55px);
+        opacity: 0.70;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .portal-info::before {
+        background: #328eff;
+        top: 80px;
+        right: 40px;
+    }
+
+
+    .big-icon {
+        width: 44px;
+        height: 44px;
+
+        margin-bottom: 18px;
+
+        border-radius: 13px;
+
+        font-size: 18px;
+    }
+
+
+    .portal-info h1 {
+        font-size: 24px;
+
+        margin-bottom: 9px;
+    }
+
+
+    .portal-info>p {
+        font-size: 12px;
+
+        line-height: 1.5;
+
+        margin-bottom: 15px;
+    }
+
+
+    .portal-info ul {
+        padding-left: 17px;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       LOGIN CARD
+    ========================= */
+
+    .login-card {
+        width: 100%;
+
+        padding: 20px;
+
+        box-sizing: border-box;
+
+        border-radius: 18px;
+    }
+
+
+    /* =========================
+       LOGIN HEADING
+    ========================= */
+
+    .login-heading {
+        gap: 10px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .small-icon {
+        width: 38px;
+        height: 38px;
+
+        flex-shrink: 0;
+
+        border-radius: 11px;
+
+        font-size: 14px;
+    }
+
+
+    .login-heading h2 {
+        font-size: 16px;
+
+        margin-bottom: 2px;
+    }
+
+
+    .login-heading p {
+        font-size: 10px;
+    }
+
+    .auth-tabs {
+        width: 100%;
+        height: 38px;
+        margin-bottom: 18px;
+    }
+
+
+    #signInTab {
+        padding: 10px;
+    }
+
+    #registerTab {
+        padding: 10px;
+    }
+
+    .auth-tabs button {
+        font-size: 12px;
+    }
+
+    form>label {
+        font-size: 12px;
+
+        margin-top: 13px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .input-box {
+        width: 100%;
+        height: 38px;
+        padding: 0 10px;
+        gap: 7px;
+        box-sizing: border-box;
+    }
+
+
+    .input-box i {
+        font-size: 12px;
+    }
+
+
+    .input-box input {
+        min-width: 0;
+
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       LOGIN OPTIONS
+    ========================= */
+
+    .login-options {
+        margin: 14px 0;
+
+        gap: 8px;
+    }
+
+
+    .remember {
+        font-size: 11px;
+
+        gap: 5px;
+    }
+
+
+    .login-options a {
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       LOGIN BUTTON
+    ========================= */
+
+    .login-btn {
+        width: 100%;
+
+        height: 38px;
+
+        font-size: 12px;
+    }
+
+
+    /* =========================
+       OR
+    ========================= */
+
+    .or {
+        margin: 16px 0;
+
+        gap: 8px;
+
+        font-size: 10px;
+    }
+
+
+    /* =========================
+       GOOGLE BUTTON
+    ========================= */
+
+    .google-btn {
+        width: 100%;
+
+        height: 38px;
+
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .auth-footer {
+        padding-top: 25px;
+        font-size: 10px;
+    }
+
+    .active {
+        height: 100%;
+        width: 100%;
+        background: #2478da;
+    }
 }
