@@ -563,4 +563,9 @@ body {
         font-size: 9px;
         padding: 11px 2px
     }
+
+    .cursor,
+    .cursor-blur {
+        display: none;
+    }
 }
