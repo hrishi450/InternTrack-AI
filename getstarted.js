@@ -3,10 +3,6 @@ document.querySelector("#home-back")
         window.location.href = "index.html";
     })
 
-document.querySelector("#cont")
-    .addEventListener("click", function () {
-
-    })
 
 const nav = performance.getEntriesByType("navigation")[0];
 
@@ -17,3 +13,13 @@ if (
 ) {
     window.location.replace("index.html");
 }
+
+const cursor = document.querySelector(".cursor");
+const cursorBlur = document.querySelector(".cursor-blur");
+
+document.addEventListener("mousemove", function (e) {
+    cursor.style.left = e.clientX - 10 + "px";
+    cursor.style.top = e.clientY - 10 + "px";
+    cursorBlur.style.left = e.clientX + "px";
+    cursorBlur.style.top = e.clientY + "px";
+});

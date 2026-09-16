@@ -1,11 +1,21 @@
+const cursor = document.querySelector(".cursor");
+const cursorBlur = document.querySelector(".cursor-blur");
+
+document.addEventListener("mousemove", function (e) {
+
+    cursor.style.left = e.clientX - 10 + "px";
+    cursor.style.top = e.clientY - 10 + "px";
+    cursorBlur.style.left = e.clientX + "px";
+    cursorBlur.style.top = e.clientY + "px";
+});
+
+
 // Get role from URL
 
 const params = new URLSearchParams(window.location.search);
 
 
 const role = params.get("role");
-console.log(role);
-
 // Get HTML elements
 
 const portalTitle = document.querySelector("#portalTitle");
@@ -25,6 +35,7 @@ const registerTab = document.querySelector("#registerTab");
 
 const loginForm = document.querySelector("#loginForm");
 const registerForm = document.querySelector("#registerForm");
+
 
 // Role data
 const roles = {
@@ -145,6 +156,10 @@ const roles = {
 if (roles[role]) {
     const currentRole = roles[role];
 
+    registerButton.addEventListener("click", function () {
+        document.querySelector("a").href = `dashboard.html`;
+    })
+
     portalTitle.textContent =
         currentRole.portalTitle;
 
@@ -183,7 +198,6 @@ if (roles[role]) {
 }
 
 
-
 // Sign In
 
 signInTab.addEventListener("click", function () {
@@ -208,3 +222,23 @@ registerTab.addEventListener("click", function () {
     signInTab.classList.remove("active");
 
 });
+
+
+loginForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+    Delay: 2
+
+    const params = new URLSearchParams(window.location.search);
+    const role = params.get("role");
+
+    window.location.href = `dashboard.html?role=${role}`;
+
+});
+
+registerForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const params = new URLSearchParams(window.location.search);
+    const role = params.get("role");
+    window.location.href = `dashboard.html?role=${role}`;
+})

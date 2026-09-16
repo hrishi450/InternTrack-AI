@@ -44,6 +44,32 @@ body {
     box-sizing: border-box;
 }
 
+.cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #3369F3;
+    border-radius: 50%;
+    position: fixed;
+}
+
+.cursor-blur {
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(51, 105, 243, 0.30),
+            rgba(51, 105, 243, 0.10),
+            transparent 70%);
+    filter: blur(8px);
+    /* pointer-events: none; */
+    transform: translate(-50%, -50%);
+    transition:
+        left 0.15s ease-out,
+        top 0.15s ease-out;
+    z-index: 0;
+}
+
 .logo {
     height: 5vh;
     min-height: 30px;
@@ -151,7 +177,7 @@ body {
 
 .sign2:hover {
     background-color: #336fdb;
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 .sign2 i {
@@ -195,7 +221,7 @@ body {
     color: #e63737;
     font-size: 17px;
     cursor: pointer;
-    padding: 2% 2%;
+    padding: 5% 2%;
     align-self: center;
     justify-self: center;
     flex-shrink: 0;
@@ -344,7 +370,6 @@ body {
     .active {
         height: 50vh;
         width: 98vw;
-        /* background-color: red; */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -563,6 +588,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    z-index: 1000;
 }
 
 .heading3 .btn1 {
@@ -575,12 +601,19 @@ body {
     padding-right: 15px;
     border-radius: 30px;
     padding-left: 5px;
-    color: #F2F7FE;
+    z-index: 1000;
+}
+
+.heading3 .btn1 a {
+    color: #ffffff;
+    text-decoration: none;
+    z-index: 1000;
 }
 
 .heading3 i {
     color: #fdfdfd;
     padding-left: 10px;
+    pointer-events: none;
 }
 
 .heading3 .btn2 {
@@ -618,6 +651,7 @@ body {
         0 15px 35px rgba(0, 0, 0, 0.15);
     border-color: #2563eb;
     color: #2563eb;
+    z-index: 1000;
 }
 
 .heading4 {
@@ -838,6 +872,11 @@ body {
     .ctrl-btn svg {
         width: 18px;
         height: 18px;
+    }
+
+    .cursor,
+    cursor-blur {
+        display: none;
     }
 }
 
@@ -4031,31 +4070,16 @@ form>label {
     color: #718097;
 }
 
-/* =========================
-   RESPONSIVE - 380px
-========================= */
-
 @media (max-width: 380px) {
-
-    /* MAIN */
-
     .auth-page {
         width: 100%;
         min-height: 100vh;
-
         padding: 16px 12px;
-
         overflow-x: hidden;
     }
 
-
-    /* =========================
-       HEADER
-    ========================= */
-
     .auth-header {
         width: 100%;
-
         align-items: center;
     }
 
@@ -4072,50 +4096,26 @@ form>label {
     .logo-icon {
         width: 28px;
         height: 28px;
-
         font-size: 12px;
     }
 
-
-    /* =========================
-       CHOOSE ROLE
-    ========================= */
-
     .choose-role {
         margin-top: 20px;
-
         font-size: 11px;
     }
 
-
-    /* =========================
-       MAIN CONTENT
-    ========================= */
-
     .auth-main {
         display: flex;
-
         flex-direction: column;
-
         width: 100%;
-
         gap: 16px;
-
         margin-top: 18px;
     }
 
-
-    /* =========================
-       PORTAL INFO
-    ========================= */
-
     .portal-info {
         width: 100%;
-
         min-height: auto;
-
         padding: 20px;
-
         border-radius: 18px;
         overflow: hidden;
         box-sizing: border-box;
@@ -4139,62 +4139,37 @@ form>label {
         right: 40px;
     }
 
-
     .big-icon {
         width: 44px;
         height: 44px;
-
         margin-bottom: 18px;
-
         border-radius: 13px;
-
         font-size: 18px;
     }
 
-
     .portal-info h1 {
         font-size: 24px;
-
         margin-bottom: 9px;
     }
 
-
     .portal-info>p {
         font-size: 12px;
-
         line-height: 1.5;
-
         margin-bottom: 15px;
     }
 
-
     .portal-info ul {
         padding-left: 17px;
-
         font-size: 12px;
-
         line-height: 1.8;
     }
 
-
-    /* =========================
-       LOGIN CARD
-    ========================= */
-
     .login-card {
         width: 100%;
-
         padding: 20px;
-
         box-sizing: border-box;
-
         border-radius: 18px;
     }
-
-
-    /* =========================
-       LOGIN HEADING
-    ========================= */
 
     .login-heading {
         gap: 10px;
@@ -4202,25 +4177,18 @@ form>label {
         margin-bottom: 18px;
     }
 
-
     .small-icon {
         width: 38px;
         height: 38px;
-
         flex-shrink: 0;
-
         border-radius: 11px;
-
         font-size: 14px;
     }
 
-
     .login-heading h2 {
         font-size: 16px;
-
         margin-bottom: 2px;
     }
-
 
     .login-heading p {
         font-size: 10px;
@@ -4253,7 +4221,6 @@ form>label {
         margin-bottom: 6px;
     }
 
-
     .input-box {
         width: 100%;
         height: 38px;
@@ -4274,17 +4241,11 @@ form>label {
         font-size: 12px;
     }
 
-
-    /* =========================
-       LOGIN OPTIONS
-    ========================= */
-
     .login-options {
         margin: 14px 0;
 
         gap: 8px;
     }
-
 
     .remember {
         font-size: 11px;
@@ -4292,15 +4253,9 @@ form>label {
         gap: 5px;
     }
 
-
     .login-options a {
         font-size: 11px;
     }
-
-
-    /* =========================
-       LOGIN BUTTON
-    ========================= */
 
     .login-btn {
         width: 100%;
@@ -4310,11 +4265,6 @@ form>label {
         font-size: 12px;
     }
 
-
-    /* =========================
-       OR
-    ========================= */
-
     .or {
         margin: 16px 0;
 
@@ -4322,11 +4272,6 @@ form>label {
 
         font-size: 10px;
     }
-
-
-    /* =========================
-       GOOGLE BUTTON
-    ========================= */
 
     .google-btn {
         width: 100%;
@@ -4336,11 +4281,6 @@ form>label {
         font-size: 11px;
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
-
     .auth-footer {
         padding-top: 25px;
         font-size: 10px;
@@ -4349,6 +4289,6 @@ form>label {
     .active {
         height: 100%;
         width: 100%;
-        background: #2478da;
+        /* background: #2478da; */
     }
 }

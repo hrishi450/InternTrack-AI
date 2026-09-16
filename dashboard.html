@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>InternTrack AI Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-blur"></div>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon"><img src="material/logo 2.png" alt=""></div>
+                <span>InternTrack <b>AI</b></span>
+            </div>
+            <div class="role-label" id="roleLabel">STUDENT</div>
+            <nav id="sidebarMenu"></nav>
+            <div class="sidebar-bottom">
+                <p id="userEmail">you@example.com</p>
+                <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+            </div>
+        </aside>
+        <main class="main">
+            <header class="topbar">
+                <div>
+                    <h1 id="dashboardTitle">Student Dashboard</h1>
+                    <p id="dashboardSubtitle">Track your internship journey</p>
+                </div>
+                <div class="welcome"><i class="fa-solid fa-circle-check"></i><span id="welcomeText">Welcome back,
+                        Student</span></div>
+            </header>
+            <section class="stats" id="stats"></section>
+            <section class="dashboard-grid">
+                <div class="main-column">
+                    <div class="card internship-card" id="mainContent"></div>
+                    <div class="card tasks-card" id="tasks"></div>
+                </div>
+                <div class="right-column" id="rightContent"></div>
+            </section>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

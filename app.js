@@ -13,8 +13,16 @@ dashboard.addEventListener("mousemove", function (e) {
   glow.style.top = y + "px";
 
 });
+const cursor = document.querySelector(".cursor");
+const cursorBlur = document.querySelector(".cursor-blur");
 
+document.addEventListener("mousemove", function (e) {
 
+  cursor.style.left = e.clientX - 10 + "px";
+  cursor.style.top = e.clientY - 10 + "px";
+  cursorBlur.style.left = e.clientX + "px";
+  cursorBlur.style.top = e.clientY + "px";
+});
 
 // MENU  BUTTON 
 
