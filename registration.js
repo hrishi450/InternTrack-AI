@@ -223,22 +223,32 @@ registerTab.addEventListener("click", function () {
 
 });
 
-
 loginForm.addEventListener("submit", function (e) {
-
     e.preventDefault();
-    Delay: 2
+    const email = document.querySelector("#email");
+    const pass = document.querySelector("#password");
 
-    const params = new URLSearchParams(window.location.search);
-    const role = params.get("role");
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-    window.location.href = `dashboard.html?role=${role}`;
+    let emailans = emailRegex.test(email.value);
+    let passwordans = passwordRegex.test(pass.value);
+
+    if (!emailans) {
+        const error = document.querySelector("#error")
+        error.style.display = "block";
+    }
+    if (!passwordans) {
+        const error = document.querySelector("#passerror")
+        error.style.display = "block";
+    }
+
+    if (emailans && passwordans) {
+
+        const params = new URLSearchParams(window.location.search);
+        const role = params.get("role");
+
+        window.location.href = `dashboard.html?role=${role}`;
+    }
 
 });
-
-registerForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const params = new URLSearchParams(window.location.search);
-    const role = params.get("role");
-    window.location.href = `dashboard.html?role=${role}`;
-})

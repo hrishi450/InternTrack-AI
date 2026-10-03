@@ -156,3 +156,4 @@ document.addEventListener("mousemove", function (e) {
     cursorBlur.style.left = e.clientX + "px";
     cursorBlur.style.top = e.clientY + "px";
 });
+

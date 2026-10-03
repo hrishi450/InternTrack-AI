@@ -76,12 +76,20 @@
                     <label>Email</label>
                     <div class="input-box">
                         <i class="fa-regular fa-envelope"></i>
-                        <input type="email" placeholder="you@example.com" required>
+                        <input id="email" type="email" placeholder="you@example.com">
+
+                    </div>
+                    <div id="error">
+                        <h5>email Error</h5>
                     </div>
                     <label>Password</label>
                     <div class="input-box">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="••••••••" required>
+                        <input id="password" type="password" placeholder="••••••••" required>
+
+                    </div>
+                    <div id="passerror">
+                        <h5>password Error</h5>
                     </div>
                     <div class="login-options">
                         <label class="remember">
@@ -129,7 +137,7 @@
                         New student accounts may require admin approval.
                     </p>
                     <button type="submit" class="login-btn" id="registerButton">
-                        <a href="dashboard.html">Create Student account</a>
+                        <a href="">Create Student account</a>
                     </button>
 
                 </form>

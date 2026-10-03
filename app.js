@@ -159,3 +159,134 @@ impact.addEventListener('click', function () {
 });
 
 
+gsap.from(".heading h1,.heading h2,.heading2", {
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.3
+})
+
+gsap.from(".fea-1 h5,.fea-2 h4,.fea-2 i,.fea-2 h5", {
+  y: 60,
+  duration: 1,
+  opacity: 0,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".features",
+    scroller: "body",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 3
+  }
+})
+const tl = gsap.timeline()
+
+tl.from('.fea-3 .box1,.fea-3 .box2,.fea-3 .box3,.fea-3 .box4', {
+  y: 50,
+  duration: 1,
+  opacity: 0,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".fea-3",
+    start: "top 80%",
+    end: "top 40%",
+    scrub: 3
+  }
+})
+
+tl.from('.role1 h5,.role1 h2,.role1 h4', {
+  y: 50,
+  duration: 1,
+  opacity: 0,
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: ".role",
+    scroller: "body",
+    start: "top 80%",
+    end: "top 40%",
+    scrub: 3
+  }
+})
+tl.from('.role2 .box1, .role2 .box2, .role2 .box3,.role2 .box4', {
+  y: 55,
+  duration: 0.5,
+  opacity: 0,
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: ".role2",
+    scroller: "body",
+    start: "top 80%",
+    end: "top 40%",
+    scrub: 3
+  }
+})
+
+gsap.from('.Dashboard', {
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".Dashboard",
+    scroller: "body",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 3
+  }
+})
+
+gsap.from('.testimonials h5,.test-heading', {
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".testimonials",
+    scroller: "body",
+    start: "top 70%",
+    end: "top 50%",
+    scrub: 3
+  }
+})
+
+tl.from('.test-card', {
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".test-cards",
+    scroller: "body",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 3
+  }
+})
+
+gsap.from('.lastbox', {
+  y: 30,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".lastbox",
+    scroller: "body",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 3
+  }
+})
+
+gsap.from('.footer', {
+  y: 30,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: {
+    trigger: ".footer",
+    scroller: "body",
+    start: "top 80%",
+    end: "top 50%",
+    scrub: 3
+  }
+})

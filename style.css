@@ -6,6 +6,21 @@
 }
 
 @font-face {
+    font-family: popinB;
+    src: url(./material/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: popinSB;
+    src: url(material/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: popinM;
+    src: url(material/Poppins-Medium.ttf);
+}
+
+@font-face {
     font-family: hmm;
     src: url(./UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2);
 }
@@ -50,6 +65,7 @@ body {
     background-color: #3369F3;
     border-radius: 50%;
     position: fixed;
+    z-index: 0;
 }
 
 .cursor-blur {
@@ -546,9 +562,10 @@ body {
     justify-content: center;
     font-family: hmm;
     font-size: 4.5em;
-    font-weight: 550;
+    font-weight: 500;
     height: 70px;
     margin: 0%;
+    font-family: popinM;
 }
 
 .heading h2 {
@@ -556,8 +573,10 @@ body {
     justify-self: center;
     margin: 0%;
     font-size: 4.5em;
-    font-weight: 550;
+    font-weight: 400;
     width: 60vw;
+    font-family: popinM;
+
 }
 
 .heading i {
@@ -3071,6 +3090,8 @@ body {
     }
 }
 
+/* //footer */
+
 .footer {
     width: 100%;
     margin-top: 50px;
@@ -3315,6 +3336,7 @@ body {
     gap: 10px;
     padding-top: 2%;
     color: #353636;
+    z-index: 100;
 }
 
 #home-back h4:hover {
@@ -3682,6 +3704,7 @@ i {
     left: 10px;
 }
 
+/* Registration */
 .auth-page {
     width: min(100%, 1200px);
     min-height: 100vh;
@@ -3704,7 +3727,7 @@ i {
 .choose-role {
     text-decoration: none;
     color: #40516d;
-
+    z-index: 100;
     font-size: 14px;
     font-weight: 500;
 }
@@ -3974,6 +3997,20 @@ form>label {
 .login-btn:hover {
     background: #1677c7;
     transform: translateY(-1px);
+}
+
+#error {
+    display: none;
+    color: red;
+    width: 100%;
+    font-size: 16px;
+}
+
+#passerror {
+    display: none;
+    color: red;
+    width: 100%;
+    font-size: 16px;
 }
 
 .or {

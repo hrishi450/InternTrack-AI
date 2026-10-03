@@ -4,6 +4,11 @@
     box-sizing: border-box
 }
 
+@font-face {
+    font-family: popinB;
+    src: url(material/Poppins-Bold.ttf);
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #263653;
@@ -78,7 +83,8 @@ body {
     font-size: 12px;
     padding: 10px 10px;
     border-radius: 8px;
-    transition: .2s
+    transition: .2s;
+    z-index: 100;
 }
 
 #sidebarMenu a i {
