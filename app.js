@@ -35,7 +35,6 @@ let logoText = document.querySelector('.text');
 let content = document.querySelector('#navLinks');
 
 
-
 menuBtn.addEventListener('click', (det) => {
   nav.classList.add('active');
   if ((det.target.parentElement)) {
@@ -46,6 +45,7 @@ menuBtn.addEventListener('click', (det) => {
     content.style.display = 'flex';
     login.style.width = '35px';
   }
+
 
 
 });
@@ -172,20 +172,19 @@ gsap.from(".fea-1 h5,.fea-2 h4,.fea-2 i,.fea-2 h5", {
   opacity: 0,
   stagger: 0.3,
   scrollTrigger: {
-    trigger: ".features",
+    trigger: ".fea-1",
     scroller: "body",
     start: "top 80%",
     end: "top 50%",
     scrub: 3
   }
 })
-const tl = gsap.timeline()
 
-tl.from('.fea-3 .box1,.fea-3 .box2,.fea-3 .box3,.fea-3 .box4', {
-  y: 50,
-  duration: 1,
+gsap.from('.fea-3 .box1,.fea-3 .box2,.fea-3 .box3,.fea-3 .box4', {
+  y: 100,
+  duration: 0.5,
   opacity: 0,
-  stagger: 0.3,
+  stagger: 0.1,
   scrollTrigger: {
     trigger: ".fea-3",
     start: "top 80%",
@@ -194,7 +193,7 @@ tl.from('.fea-3 .box1,.fea-3 .box2,.fea-3 .box3,.fea-3 .box4', {
   }
 })
 
-tl.from('.role1 h5,.role1 h2,.role1 h4', {
+gsap.from('.role1 h5,.role1 h2,.role1 h4', {
   y: 50,
   duration: 1,
   opacity: 0,
@@ -207,7 +206,7 @@ tl.from('.role1 h5,.role1 h2,.role1 h4', {
     scrub: 3
   }
 })
-tl.from('.role2 .box1, .role2 .box2, .role2 .box3,.role2 .box4', {
+gsap.from('.role2 .box1, .role2 .box2, .role2 .box3,.role2 .box4', {
   y: 55,
   duration: 0.5,
   opacity: 0,
@@ -238,7 +237,7 @@ gsap.from('.Dashboard', {
 gsap.from('.testimonials h5,.test-heading', {
   y: 50,
   opacity: 0,
-  duration: 1,
+  duration: 2,
   stagger: 0.3,
   scrollTrigger: {
     trigger: ".testimonials",
@@ -249,7 +248,7 @@ gsap.from('.testimonials h5,.test-heading', {
   }
 })
 
-tl.from('.test-card', {
+gsap.from('.test-card', {
   y: 50,
   opacity: 0,
   duration: 1,
